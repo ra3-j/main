@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "f0da4d75-e223-4fc6-b7f5-b11dbdbfd340",
+		"name": "node test Ali Ahmad",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/getInfo/6277a6671b203a502e882728",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getInfo",
+						"6277a6671b203a502e882728"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/getAll/6277a6671b203a502e882728",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getAll",
+						"6277a6671b203a502e882728"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"fname\":\"Ameer\",\"Lname\":\"Ahmad\",\"todo\":[{\"id\":\"1\",\"desc\":\"first one\"},{\"id\":\"2\",\"desc\":\"second one\"},{\"id\":\"3\",\"desc\":\"third one\"}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/Add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"_id\":\"6277c110bc5e44dd45eb7da9\",\"fname\":\"Sami\",\"Lname\":\"Ahmad\",\"todo\":[{\"id\":\"1\",\"desc\":\"first one\"},{\"id\":\"2\",\"desc\":\"second one\"},{\"id\":\"3\",\"desc\":\"third one\"},{\"id\":\"4\",\"desc\":\"fourth one\"}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/Update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/Delete/6277c15abc5e44dd45eb7daa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Delete",
+						"6277c15abc5e44dd45eb7daa"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
