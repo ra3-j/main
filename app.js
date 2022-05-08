@@ -50,7 +50,6 @@ app.delete('/api/Delete/:id',(req,res)=>{
 app.get('/api/getInfo/:id',(req,res)=>{   
     client.connect(async err => {
     const collection = client.db().collection("user");
-    console.log(req.params.id);
     await collection.find({_id: ObjectId(req.params.id)}).toArray((error, documents) => {
             if (error) {
                 throw error;
@@ -60,6 +59,19 @@ app.get('/api/getInfo/:id',(req,res)=>{
                 toDoInfo.push(toDo.desc);
             }
             res.send(toDoInfo);
+        });
+    client.close();
+});
+});
+
+app.get('/api/getAll/:id',(req,res)=>{   
+    client.connect(async err => {
+    const collection = client.db().collection("user");
+    await collection.find({_id: ObjectId(req.params.id)}).toArray((error, documents) => {
+            if (error) {
+                throw error;
+            }
+            res.send(documents[0].todo);
         });
     client.close();
 });
